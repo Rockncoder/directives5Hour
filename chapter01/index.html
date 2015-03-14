@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="Mad01App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .expander {
+            border: 1px solid black;
+            width: 250px;
+        }
+
+        .expander > .title {
+            background-color: #000;
+            color: #fff;
+            padding: .1em .3em;
+            cursor: pointer;
+        }
+
+        .expander > .body {
+            padding: .1em .3em;
+        }
+    </style>
+</head>
+<body>
+<hello></hello>
+<div hellot>Bob</div>
+<hr/>
+<div ng-controller="SomeController">
+    <expander class="expander" expander-title="title">
+        {{text}}
+    </expander>
+    <hr/>
+    <expander2 class="expander" expander-title="Click Me Please">
+        {{text}}
+    </expander2>
+</div>
+<hr/>
+<div ng-controller="EmployeeController">
+    Selected employee: {{selectedEmployee.name}}
+    <div ng-repeat="employee in employees" ng-click="$parent.selectedEmployee = employee">
+        {{employee.name}}
+    </div>
+</div>
+<hr/>
+
+<script src="../libs/angular/angular.js"></script>
+<script src="app.js"></script>
+
+<!-- when these lines are commented in, ng will grab the template from here and not need to a fetch -->
+<!--<script type="text/ng-template" id="hello.html">-->
+    <!--<div>Hi there from a ng-template file</div>-->
+<!--</script>-->
+
+</body>
+</html>
