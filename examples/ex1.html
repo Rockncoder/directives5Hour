@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="ex1App">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../libs/angular/angular.js"></script>
+</head>
+<body>
+
+    <div hello></div>
+
+
+<script>
+
+    (function () {
+        "use strict"
+
+        angular.module("ex1App", [])
+                .directive("hello", function () {
+                    return {
+
+                        //template: "<div>Hi there <span ng-transclude></span></div>",
+                        templateUrl: "../chapter01/hello.html",
+                        transclude: true,
+                        replace: true
+
+                    };
+                });
+    }());
+
+</script>
+
+</body>
+</html>
