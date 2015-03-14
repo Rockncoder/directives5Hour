@@ -12,6 +12,11 @@
                 {name: "Eric"},
                 {name: "Larry"}
             ];
+            $scope.setCurrent = function(output, input){
+                console.log("Employee" + input.name);
+                output = input;
+            };
+
         }]);
 
 }());

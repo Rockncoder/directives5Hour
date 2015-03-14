@@ -10,7 +10,7 @@
 
 <div ng-controller="EmployeeController">
     Selected Employee: {{selectedEmployee.name}}
-    <div ng-repeat="employee in employees" ng-click="selectedEmployee=employee">
+    <div ng-repeat="employee in employees" ng-click="setCurrent(selectedEmployee,employee)">
         {{employee.name}}
     </div>
 </div>
