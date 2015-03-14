@@ -6,21 +6,27 @@
     <link rel="stylesheet" href="../css/jquery-ui.css">
     <link rel="stylesheet" href="../css/jquery.timepicker.css">
 
-    <script src="../libs/angular/angular.js"></script>
     <script src="../libs/jquery/jquery-2.1.1.js"></script>
     <script src="../libs/jquery/jquery-ui.js"></script>
-    <script src="../libs/jquery/jquery.timepicker.min.js"></script>
+    <script src="../libs/angular/angular.js"></script>
+    <!--<script src="../libs/jquery/jquery.timepicker.min.js"></script>-->
     <script src="ex4app.js"></script>
+    <script src="datePicker.js"></script>
 </head>
 <body>
 
-<p>Date: <input type="text" id="datepicker"></p>
+<!--<p>Date: <input type="text" id="datepicker"></p>-->
 
-    <script>
-        $(function() {
-            $( "#datepicker" ).datepicker();
-        });
-    </script>
+    <div ng-controller="MainController">
+    <input id="dateField" datepicker ng-model="$parent.currentDate"/>
+
+    </div>
+
+    <!--<script>-->
+        <!--$(function() {-->
+            <!--$( "#datepicker" ).datepicker();-->
+        <!--});-->
+    <!--</script>-->
 
 </body>
 </html>
