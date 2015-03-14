@@ -3,7 +3,7 @@
 
     angular.module("ex2", [])
         .controller("SomeController", ["$scope", function ($scope) {
-            $scope.title = "Click me to expand";
+            //$scope.title = "Click me to expand";
             $scope.text = "Hi there folks. I am now visible";
         }])
         .directive("expander", function () {
@@ -12,7 +12,7 @@
                 replace: true,
                 transclude: true,
                 scope: {
-                    title: "=expanderTitle"
+                    title: "@expanderTitle"
                 },
                 template: "<div>" +
                 '<div class="title" ng-click="toggle()">{{title}}</div>' +
