@@ -19,11 +19,11 @@
                 '<div class="body" ng-show="showMe" ng-transclude></div>' +
                 '</div>',
                 link: function (scope, element, attrs) {
-                    scope.showMe = false,
-                        scope.toggle = function () {
-                            scope.showMe = !scope.showMe;
-                        }
+                    scope.showMe = false;
+                    scope.toggle = function () {
+                        scope.showMe = !scope.showMe;
+                    }
                 }
             };
         });
-});
+}());
